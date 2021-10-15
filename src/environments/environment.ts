@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  BASE_URL_JAMENDO_AL: "https://api.jamendo.com/v3.0/artists/albums/",
+  BASE_URL_JAMENDO: "https://api.jamendo.com/v3.0/artists"
 };
 
 /*

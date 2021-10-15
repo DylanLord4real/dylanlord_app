@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #240046;
+    --secondary-color: #E84855;
+    --info-color: #FFBA49;
+    --success-color: #06A77D;
+    --danger-color: #310209;
+    --light-color: #F3C677;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--primary-color);
+    padding-top: 4rem;
+    height: 100%;
+}
+
+body * {
+    color: ghostwhite;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
