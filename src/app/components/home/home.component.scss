@@ -1,3 +1,61 @@
-.card {
-    position: relative;
+.cards {
+    width: 100%;
+    .card {
+        display: inline-block;
+        width: 330px;
+        margin: 10px;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 4px 3px 8px 0px #E84855;
+        transition-duration: 0.3s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 4px 3px 8px 0px var(--light-color);
+            transform: translateY(-3px);
+        }
+        &-album {
+            background-color: #000;
+            position: relative;
+            overflow: hidden;
+            height: 198px;
+            color: #FFF;
+            text-align: center;
+            &-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                height: 198px;
+            }
+        }
+        &-name {
+            color: #FFF;
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 20px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        &-info {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 152px;
+        }
+        &-playlist {
+            display: flex;
+        }
+        &-stream {
+            display: flex;
+        }
+        &-release {
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
 }

@@ -1,14 +1,21 @@
-<div class="card">
-    <div class="card-album">
-        <img class="card-album-img" src="https://static.booska-p.com/images/news/kendrick-lamar-cover-et-tracklist-de-son-album-damn-photos-649.jpg" alt="album_image">
-    </div>
-    <div class="card-info">
-        <h1 class="card-name">Nom de l'album</h1>
-        <p class="card-playlist">Les pistes de l'album
-            <span class="card-stream">2100</span>
-        </p>
-        <p class="card-release">
-            Date de sortie : 21 Oct 2020
-        </p>
-    </div>
+<div class="cards">
+    <ng-container *ngFor="let art of artistInfo">
+        <ng-container *ngFor="let album of art.albums">
+            <div class="card">
+                <div class="card-album">
+                    <img *ngIf="album.image" class="card-album-img" src="{{album.image}}" alt="album_image">
+                    <p *ngIf="!album.image">NO IMAGE</p>
+                </div>
+                <div class="card-info">
+                    <h1 class="card-name">{{album.name}}</h1>
+                    <p class="card-playlist">{{album.name}}
+                        <span class="card-stream">Test</span>
+                    </p>
+                    <p class="card-release">
+                        {{album.releasedate | date}}
+                    </p>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
 </div>
