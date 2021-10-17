@@ -32,6 +32,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     })
   }
 
+  openAlbum(id: string): void{
+    this.route.navigate(['details', id]);
+  }
+
   getInfoAlbumJamendo(name: string,search?: string): void{
     this.albumSub = this.alservice
     .getAlbumList(name, search)

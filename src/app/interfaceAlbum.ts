@@ -9,6 +9,7 @@ export interface Tracks{
   name: string,
   duration: string,
   audio: string,
+  image: string,
   audiodownload: string,
   audiodownload_allowed: boolean,
 }

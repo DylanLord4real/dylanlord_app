@@ -1,7 +1,7 @@
 <div class="cards">
     <ng-container *ngFor="let art of artistInfo">
         <ng-container *ngFor="let album of art.albums">
-            <div class="card">
+            <div class="card" (click)="openAlbum(album.id)">
                 <div class="card-album">
                     <img *ngIf="album.image" class="card-album-img" src="{{album.image}}" alt="album_image">
                     <p *ngIf="!album.image">NO IMAGE</p>

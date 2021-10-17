@@ -1,1 +1,23 @@
-<p>detail-album works!</p>
+<div class="content">
+    <ng-container *ngFor="let track of tracksInfo">
+        <ng-container *ngFor="let single of track.tracks">
+            <div class="billboard">
+                <div class="billboard-figure">
+                    <img class="billboard-figure-image" src="{{single.image}}" alt="image Album">
+                </div>
+                <div class="billboard-list">
+                    <h2 class="billboard-title">{{single.album_name}}</h2>
+                    <p class="billboard-title-song">{{single.name}}</p>
+                    <div class="billboard-songs">
+                        <audio class="billboard-audio" src="{{single.audio}}" controls></audio>
+                        <a *ngIf="single.audiodownload_allowed" class="billboard-button" href="{{single.audiodownload}}">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <hr>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

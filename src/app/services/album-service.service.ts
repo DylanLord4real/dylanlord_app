@@ -14,10 +14,14 @@ export class AlbumServiceService {
   constructor(private http: HttpClient) {
    }
 
-   getTrackListAlbum(artist_name: string, album_name: string): Observable<APIResponse<Artiste<Tracks>>>{
-     let params = new HttpParams().set('client_id', this.key).set('name', artist_name).set('album_name', album_name);
+   getTrackListAlbum(artist_name: string, album_id: string): Observable<APIResponse<Artiste<Tracks>>>{
+     let params = new HttpParams()
+     .set('client_id', this.key)
+     .set('name', artist_name)
+     .set('album_id', album_id)
+     .set('order', 'track_id');
 
-     return this.http.get<APIResponse<Artiste<Tracks>>>(`${env.BASE_URL_JAMENDO}/tracks`, {
+     return this.http.get<APIResponse<Artiste<Tracks>>>(`${env.BASE_URL_JAMENDO_TR}`, {
        params: params,
      });
    }
