@@ -18,7 +18,8 @@ export class AlbumServiceService {
      let params = new HttpParams()
      .set('client_id', this.key)
      .set('name', artist_name)
-     .set('album_id', album_id);
+     .set('album_id', album_id)
+     .set('order', 'track_id');
 
      return this.http.get<APIResponse<Artiste<Tracks>>>(`${env.BASE_URL_JAMENDO_TR}`, {
        params: params,
